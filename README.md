@@ -1,1 +1,1 @@
-This is my personal blog built useing next.js
+This is my personal blog built useing next.js 
