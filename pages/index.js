@@ -10,6 +10,12 @@ export default function Home({ allPostsData }) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <link rel="manifest" href="/static/manifest.webmanifest" />
+        <meta name = "apple-mobile-web-app-capable" content="yes" />
+        <meta name = "apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name = "apple-mobile-web-app-title" content="Article wali website" />
+        <link rel="apple-touch-icon" href="../public/images/profile.jpg" />
+        <link rel="apple-touch-startup-icon" href="../public/images/profile.jpg" />
       </Head>
       <section className={utilStyles.headingMd}>
       <p>Hi, I'm <a href="https://sidx8.github.io/Siddharth-Sinha.github.io/">Sid</a> a computer science student studying engginering in india. 
