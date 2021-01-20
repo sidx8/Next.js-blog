@@ -3,9 +3,13 @@ import { getPostData, getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 import Navbar from '../components/navbar'
+import Head from 'next/head'
 export default function Home({ allPostsData }) {
   return (
     <div className="container ">
+      <Head>
+        <title>Aww.com</title>
+      </Head>
       <Navbar />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         Blog
