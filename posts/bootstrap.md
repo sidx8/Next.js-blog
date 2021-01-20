@@ -1,5 +1,5 @@
 ---
-title: "Two Forms of Pre-rendering"
+title: "bootstrap"
 date: "2020-01-01"
 tag: "frontend"
 color: "teal"

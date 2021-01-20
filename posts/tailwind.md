@@ -1,6 +1,6 @@
 ---
-title: "Two Forms of Pre-rendering"
-date: "2020-01-01"
+title: "Tailwind"
+date: "2020-01-05"
 tag: "frontend"
 color: "teal"
 ---

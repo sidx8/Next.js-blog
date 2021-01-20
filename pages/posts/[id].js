@@ -1,23 +1,82 @@
 import Layout from '../../components/layout'
+import Footer from '../../components/footer'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
+import Link from 'next/link'
 import utilStyles from '../../styles/utils.module.css'
+import Navbar from '../../components/navbar'
 
 export default function Post({ postData }) {
+  // var h =  document.documentElement,
+	// 		b = document.body,
+	// 		st = 'scrollTop',
+	// 		sh = 'scrollHeight',
+	// 		progress = document.querySelector('#progress'),
+	// 		scroll;
+	// 	var scrollpos = window.scrollY;
+	// 	var header = document.getElementById("header");
+	// 	var navcontent = document.getElementById("nav-content");
+
+	// 	document.addEventListener('scroll', function() {
+
+	// 		/*Refresh scroll % width*/
+	// 		scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+	// 		progress.style.setProperty('--scroll', scroll + '%');
+
+	// 		/*Apply classes for slide in bar*/
+	// 		scrollpos = window.scrollY;
+
+	// 		if (scrollpos > 10) {
+	// 			header.classList.add("bg-white");
+	// 			header.classList.add("shadow");
+	// 			navcontent.classList.remove("bg-gray-100");
+	// 			navcontent.classList.add("bg-white");
+	// 		} else {
+	// 			header.classList.remove("bg-white");
+	// 			header.classList.remove("shadow");
+	// 			navcontent.classList.remove("bg-white");
+	// 			navcontent.classList.add("bg-gray-100");
+
+	// 		}
+
+	// 	});
+
+
+	// 	//Javascript to toggle the menu
+	// 	document.getElementById('nav-toggle').onclick = function() {
+	// 		document.getElementById("nav-content").classList.toggle("hidden");
+	// 	}
+
   return (
-    <Layout>
-      <Head>
+      <div className="bg-gray-100  font-sans leading-normal tracking-normal">
+        <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
+     <Navbar/>
+      <div className="container w-full md:max-w-3xl mx-auto pt-20">
+        <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style={{fontFamily: 'Georgia,serif'}}>
+          {/*Title*/}
+          <div className="font-sans">
+            <p className="text-base md:text-sm text-green-500 font-bold">&lt; 
+            <Link href="/">
+            <a className="text-base md:text-sm text-green-500 font-bold no-underline hover:no-underline"> Back to home</a>
+            </Link>
+            </p>
+            <h1 className="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">{postData.title}</h1>
+            <Date className="text-sm md:text-base font-normal text-gray-600" dateString={postData.date} />
+          </div>
+          <div className="py-6" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />          
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
-    </Layout>
+        {/*Tags */}
+        <div className="text-base md:text-sm text-gray-500 px-4 py-6">
+          Tags: <a href="#" className="text-base md:text-sm text-green-500 no-underline hover:underline">Code</a> . <a href="#" className="text-base md:text-sm text-green-500 no-underline hover:underline">Learn</a>
+        </div>
+        {/*Divider*/}
+        <hr className="border-b-2 border-gray-400 mb-8 mx-4" />
+      </div>
+      <Footer />
+      </div>
   )
 }
 
