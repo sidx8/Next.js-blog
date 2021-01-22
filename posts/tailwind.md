@@ -2,7 +2,7 @@
 title: "Tailwind"
 date: "2020-01-05"
 tag: "frontend"
-color: "teal"
+color: "pink"
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
