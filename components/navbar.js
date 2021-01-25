@@ -4,9 +4,9 @@ export default function Navbar() {
       <section class="w-full antialiased bg-white select-none">
       <div className="mx-auto max-w-7xl">
       <nav>
-        <div className="container relative flex flex-wrap items-center justify-between h-24 mx-auto font-medium border-b border-gray-200 sm:px-4 md:px-2">
+        <div className="px-4 container relative flex flex-wrap items-center justify-between h-24 mx-auto font-medium border-b border-gray-200 sm:px-4 md:px-2">
           <Link href="/">
-          <a href="#_" className="w-1/4 py-4 pr-4 md:py-0">
+          <a href="#_" className="w-1/4 py-4 px-4 md:py-0">
             <span className="text-xl font-black leading-none text-gray-900 select-none logo">Aww<span className="text-indigo-600">.</span>com</span>
           </a>
           </Link>
