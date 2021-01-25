@@ -45,7 +45,7 @@ export default function Home({ allPostsData, articles }) {
             <div key={index} class="max-w-xl mt-4 bg-white rounded-xl shadow-md overflow-hidden md:max-w-3xl">
             <div class="md:flex">
               <div class="md:flex-shrink-0">
-                <img class="h-full w-60 object-cover md:w-48" src={article.urlToImage} alt="Man looking at item at a store" />
+                <img class="h-full w-full object-cover md:w-48" src={article.urlToImage} alt="Man looking at item at a store" />
               </div>
               <div class="p-8">
               <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Article</div>
