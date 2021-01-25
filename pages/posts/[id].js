@@ -10,11 +10,11 @@ import Navbar from '../../components/navbar'
 export default function Post({ postData }) {
   return (
       <div className="w-full"> 
-      <Navbar />
       <div className="bg-gray-100  font-sans leading-normal tracking-normal">
         <Head>
         <title>{postData.title}</title>
       </Head>
+       <Navbar />
       <div className="container w-full md:max-w-3xl mx-auto pt-20">
         <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style={{fontFamily: 'Georgia,serif'}}>
           {/*Title*/}
