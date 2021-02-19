@@ -12,6 +12,7 @@
     "date-fns": "^2.11.1",
     "framer-motion": "^3.2.1",
     "gray-matter": "^4.0.2",
+    "medium-editor": "^5.23.3",
     "next": "^10.0.0",
     "postcss": "^8.2.4",
     "prosemirror-model": "^1.13.1",
