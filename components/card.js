@@ -4,7 +4,7 @@ import Date from './date'
 export default function Card({id, date, title, tag, color}) {
     return (
         <Link href={`/posts/${id}`}>
-        <a key={id} className="relative flex flex-col col-span-4 px-0 py-0 space-y-2 overflow-hidden bg-white sm:rounded-xl">
+        <a key={id} className="relative flex flex-col col-span-4 px-0 py-0 space-y-2 overflow-hidden bg-gray-50 sm:rounded-xl">
         <div className={`py-1 px-2 w-min items-start text-sm font-medium text-${color}-700 bg-${color}-100 rounded-full`}>
         {tag}
         </div>

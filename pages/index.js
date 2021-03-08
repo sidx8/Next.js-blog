@@ -1,7 +1,7 @@
 import { getPostData, getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
-import Date from "../components/date";
 import Navbar from "../components/navbar";
+import Card from "../components/card";
 import Head from "next/head";
 export default function Home({ allPostsData, articles }) {
   return (
@@ -23,7 +23,6 @@ export default function Home({ allPostsData, articles }) {
                 className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-pink-700 
 "
               >
-                {" "}
                 Article Wali Website .
               </span>
             </h1>
@@ -39,9 +38,12 @@ export default function Home({ allPostsData, articles }) {
             Check out our list of awesome articles below.
           </p>
           <hr className="border-gray-300 mb-8 my-4" />
+          
           <div className="grid grid-cols-4 gap-8 mt-0 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
             {allPostsData.map(({ id, date, title, tag, color }) => (
-              <Link href={`/posts/${id}`}>
+              <>
+              <Card color={color} date={date} title={title} tag={tag} key={id} id={id} />
+              {/* <Link href={`/posts/${id}`}>
                 <a
                   key={id}
                   className="relative flex flex-col col-span-4 px-0 py-0 space-y-2 overflow-hidden sm:rounded-xl"
@@ -63,7 +65,8 @@ export default function Home({ allPostsData, articles }) {
                     dateString={date}
                   />
                 </a>
-              </Link>
+              </Link> */}
+              </>
             ))}
           </div>
 
