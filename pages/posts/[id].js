@@ -1,10 +1,8 @@
-import Layout from '../../components/layout'
 import Footer from '../../components/footer'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
 import Link from 'next/link'
-import utilStyles from '../../styles/utils.module.css'
 import Navbar from '../../components/navbar'
 
 export default function Post({ postData }) {
